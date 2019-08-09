@@ -2,6 +2,15 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route("/")
 def hello_world():
-    return 'Hello, World!'
+    items = ["Apple", "Pear", "Banana"]
+    output = ""
+    for fruit in items:
+        output += "<h3>" + fruit + "</h3>"
+    return output
+
+@app.route("/name")
+def hello_name():
+    paragraph = "<p>You are here</p>"
+    return "Chika kanu is my name" + paragraph
