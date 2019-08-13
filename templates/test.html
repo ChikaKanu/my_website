@@ -1,7 +1,20 @@
 {% extends "layout/main.html" %}
 
 {% block content %}
+    {% if name != None: %}
+        {% if age != None: %}
+            <h1>My name is {{name}} </h1>
+            <h1>I am {{age}} years old</h1>
+        {% endif %}
+    {% endif %}
 
-<h1>The name is: {{name}} </h1>
+    <form method="get">
+        <label for="name">Name:</label>
+        <input type="text" name = "name"  id="name" value="{% if name != None: %}{{name}}{% endif %}" >
+        <label for="age">Age:</label>
+        <input type="text" name = "age" value="{% if age != None: %}{{age}}{% endif %}" id="age">
+        <br/>
+        <input type="submit" value="SUBMIT FORM">
+    </form>
 
 {% endblock %}
