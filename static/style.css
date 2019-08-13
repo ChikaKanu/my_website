@@ -1,9 +1,10 @@
-.header-clean{
-    color:red;
-    font-size: 30px;
+.navigation{
+    list-style-type: none;
+
 }
 
-.test {
-    text-decoration: underline;
-    background-color: blue;
+.navigation-item{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
 }
